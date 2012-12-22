@@ -3,7 +3,8 @@ Net::Application.routes.draw do
   devise_for :users
 
   devise_scope :user do
-    get "/" => "devise/registrations#new"
+    get "/" => "devise/sessions#new"
+    get "/login" => "devise/sessions#new"
   end
 
   # The priority is based upon order of creation:
